@@ -29,7 +29,7 @@ public class PlayerControl : MonoBehaviour
         {
             StopMusicTape();
             AudioManager.instance.PlaySoundLevelComplete(gameObject);
-            Destroy(gameObject);
+            DestroyPlayer();
             LevelManager.instance.ShowLevelCompletePanel();
         }
 
@@ -55,7 +55,7 @@ public class PlayerControl : MonoBehaviour
         LevelManager.instance.ShowGameOverPanel();
         StopMusicTape();
         AudioManager.instance.PlaySoundFail(gameObject);
-        Destroy(gameObject);
+        DestroyPlayer();
         SFXManager.instance.ShowDieParticles(gameObject);
     }
 
@@ -63,5 +63,11 @@ public class PlayerControl : MonoBehaviour
     {
         rb.velocity = Vector3.zero;
         rb.AddForce(Vector3.up * force, ForceMode2D.Impulse);
+    }
+
+    void DestroyPlayer()
+    {
+        Camera.main.GetComponent<CameraFollow>().TurnOff();
+        Destroy(gameObject);
     }
 }
