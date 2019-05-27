@@ -1220,7 +1220,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.4000244, y: 43.900024}
+  m_AnchoredPosition: {x: -0.4000244, y: 43.900146}
   m_SizeDelta: {x: -1279.6, y: -574.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &919864427
@@ -1680,7 +1680,6 @@ GameObject:
   - component: {fileID: 1198241479}
   - component: {fileID: 1198241482}
   - component: {fileID: 1198241485}
-  - component: {fileID: 1198241484}
   - component: {fileID: 1198241483}
   - component: {fileID: 1198241486}
   m_Layer: 8
@@ -1804,19 +1803,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acac7c93303066440ab27541a8395496, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1198241484
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1198241478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b6d13ecf49a36a47b3ac22fa8bb6956, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SpeedFactor: 10
 --- !u!70 &1198241485
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1845,8 +1831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c5a3bace1bfe0a4e9aa6b8f1e2c796f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particles: {fileID: 5417114584102264350, guid: 9107defed8646ac4e99ea20fc13294a5,
-    type: 3}
+  lerpRate: 4
 --- !u!1 &1241480915
 GameObject:
   m_ObjectHideFlags: 0
@@ -2538,7 +2523,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -5.299988, y: 27.5}
+  m_AnchoredPosition: {x: -5.300049, y: 27.5}
   m_SizeDelta: {x: -1111.1, y: -668.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1842886257
