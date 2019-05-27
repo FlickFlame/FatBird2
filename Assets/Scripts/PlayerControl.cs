@@ -7,10 +7,23 @@ public class PlayerControl : MonoBehaviour
 
     Rigidbody2D rb;
 
+    Animator anim;
+
+    public float fallLimit = 2f;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+    }
+
+    void Update()
+    {
+        if(rb.velocity.y < fallLimit)
+        {
+            anim.SetInteger("state", 0);
+        }
     }
 
     // Update is called once per frame
@@ -63,6 +76,7 @@ public class PlayerControl : MonoBehaviour
     {
         rb.velocity = Vector3.zero;
         rb.AddForce(Vector3.up * force, ForceMode2D.Impulse);
+        anim.SetInteger("state", 1);
     }
 
     void DestroyPlayer()
